@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  app:
+    image: todo_docker1  
+    environment:
+      DB_HOST: postgres  
+      DB_PORT: 5432
+      DB_USER: todo_user
+      DB_PASSWORD: Vijay2359#
+      DB_NAME: todo_app
+    ports:
+      - "3000:3000"  
+    depends_on:
+      - postgres  
+    networks:
+      - my_network  
+
+ 
+  postgres:
+    image: postgres:latest  
+    environment:
+      POSTGRES_USER: todo_user
+      POSTGRES_PASSWORD: Vijay2359#
+      POSTGRES_DB: todo_app
+    volumes:
+      - postgres-data:/var/lib/postgresql/data  
+    networks:
+      - my_network  
+    ports:
+      - "5432:5432"  
+
+networks:
+  my_network:
+    driver: bridge  
+
+volumes:
+  postgres-data:
