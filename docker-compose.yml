@@ -1,9 +1,9 @@
 version: "3.8"
 services:
   app:
-    image: todo_docker  
+    image: todo-jenkins
     environment:
-      DB_HOST: postgres  
+      DB_HOST: postgres
       DB_PORT: 5432
       DB_USER: todo_user
       DB_PASSWORD: Vijay2359#
