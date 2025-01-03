@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   app:
-    image: todo_docker1  
+    image: todo_docker  
     environment:
       DB_HOST: postgres  
       DB_PORT: 5432

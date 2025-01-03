@@ -5,6 +5,7 @@ const { Pool } = require('pg');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const res = await fetch('http://localhost:3000/api/todos');
 
 const app = express();
 const port = 3000;
